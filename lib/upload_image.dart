@@ -33,4 +33,6 @@ void upload() async {
 
   final clipResult = await cp.write(result);
   print('复制到剪切板: $clipResult');
+
+  exit(0);
 }

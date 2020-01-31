@@ -88,12 +88,15 @@ class AzureUploader with Uploader {
       body: json.encode(body),
     );
 
+    client.close();
+    httpClient.close();
+
     final commitResult = json.decode(response.body);
 
     final repoUrl = commitResult['repository']['url'];
 
     final itemUrl =
-        '$repoUrl/items?path=%2F${pathName}&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0&download=true';
+        '$repoUrl/items?path=%2F${pathName}&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0';
 
     return itemUrl;
   }
