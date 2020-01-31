@@ -1,0 +1,19 @@
+name: upload_image
+description: A sample command-line application.
+# version: 1.0.0
+# homepage: https://www.example.com
+# author: cjl_macbook <cjl_spy@163.com>
+
+environment:
+  sdk: ">=2.5.0 <3.0.0"
+
+dependencies:
+  http: any
+  clippy:
+    git:
+      url: https://github.com/CaiJingLong/clippy.git
+      ref: a907484ec2670b1632c7d05ef80342fb3e508661
+
+dev_dependencies:
+  pedantic: ^1.8.0
+  test: ^1.6.0
