@@ -6,7 +6,7 @@
 
 ## 当前支持类型
 
--[x] azure
+- [x] azure
 
 ## Azure
 
